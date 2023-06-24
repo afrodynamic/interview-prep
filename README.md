@@ -48,7 +48,7 @@ To run this project, please follow these steps:
    npm install
    ```
 
-4. You can run the tests for JavaScript solutions by running `npm test` in the root directory.
+4. You can run the tests for TypeScript solutions by running `npm test` in the root directory.
 
    ```shell
    npm test
