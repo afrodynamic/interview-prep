@@ -1,4 +1,4 @@
-const { merge } = require('./mergeSortedArray');
+import { merge } from './mergeSortedArray';
 
 describe('mergeSortedArray', () => {
   test('should merge nums2 into nums1', () => {

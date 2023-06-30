@@ -1,4 +1,4 @@
-const { maxProfit } = require('./bestTimeToBuyAndSellStock');
+import { maxProfit } from './bestTimeToBuyAndSellStock';
 
 describe('maxProfit', () => {
   test('maxProfit([7,1,5,3,6,4]) should be 5', () => {

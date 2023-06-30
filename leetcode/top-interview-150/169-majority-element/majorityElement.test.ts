@@ -1,4 +1,4 @@
-const { majorityElement } = require('./majorityElement');
+import { majorityElement } from './majorityElement';
 
 describe('majorityElement', () => {
   test('majorityElement([3,2,3]) should be 3', () => {

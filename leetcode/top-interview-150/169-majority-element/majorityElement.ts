@@ -16,4 +16,4 @@ export function majorityElement(nums: number[]): number {
   }
 
   return majority;
-};
+}

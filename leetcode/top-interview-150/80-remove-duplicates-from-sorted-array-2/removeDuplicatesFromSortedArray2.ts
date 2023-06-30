@@ -15,4 +15,4 @@ export function removeDuplicates(nums: number[]): number {
   }
 
   return k;
-};
+}

@@ -1,4 +1,4 @@
-const { removeElement } = require('./removeElement');
+import { removeElement } from './removeElement';
 
 describe('removeElement', () => {
   test('should remove all instances of val from nums', () => {

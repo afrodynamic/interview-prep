@@ -5,7 +5,7 @@ export function isValidSudoku(board: string[][]): boolean {
     for (let col = 0; col < 9; col++) {
       const cell = board[row][col];
 
-      if (cell === ".") {
+      if (cell === '.') {
         continue;
       }
 
@@ -17,7 +17,7 @@ export function isValidSudoku(board: string[][]): boolean {
     }
 
     return true;
-  }
+  };
 
   const validateCol = (col: number): boolean => {
     const seen = new Set();
@@ -25,7 +25,7 @@ export function isValidSudoku(board: string[][]): boolean {
     for (let row = 0; row < 9; row++) {
       const cell = board[row][col];
 
-      if (cell === ".") {
+      if (cell === '.') {
         continue;
       }
 
@@ -37,7 +37,7 @@ export function isValidSudoku(board: string[][]): boolean {
     }
 
     return true;
-  }
+  };
 
   const validateBox = (row: number, col: number): boolean => {
     const seen = new Set();
@@ -46,7 +46,7 @@ export function isValidSudoku(board: string[][]): boolean {
       for (let j = col; j < col + 3; j++) {
         const cell = board[i][j];
 
-        if (cell === ".") {
+        if (cell === '.') {
           continue;
         }
 
@@ -59,7 +59,7 @@ export function isValidSudoku(board: string[][]): boolean {
     }
 
     return true;
-  }
+  };
 
   for (let i = 0; i < 9; i++) {
     if (!validateRow(i)) {
@@ -80,4 +80,4 @@ export function isValidSudoku(board: string[][]): boolean {
   }
 
   return true;
-};
+}

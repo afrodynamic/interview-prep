@@ -7,7 +7,7 @@ export function rotate(nums: number[], k: number): void {
       start++;
       end--;
     }
-  }
+  };
 
   const n = nums.length;
   k %= n;
@@ -15,4 +15,4 @@ export function rotate(nums: number[], k: number): void {
   reverse(0, n - 1);
   reverse(0, k - 1);
   reverse(k, n - 1);
-};
+}

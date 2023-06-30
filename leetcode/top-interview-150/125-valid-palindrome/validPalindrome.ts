@@ -1,5 +1,5 @@
 export function isPalindrome(s: string): boolean {
-  let phrase = s.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  const phrase = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
 
   if (phrase.length === 0) {
     return true;
@@ -18,4 +18,4 @@ export function isPalindrome(s: string): boolean {
   }
 
   return true;
-};
+}
