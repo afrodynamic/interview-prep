@@ -1,4 +1,22 @@
 export const canJump = (nums: number[]): boolean => {
+  let maxReachableIndex = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (i > maxReachableIndex) {
+      return false;
+    }
+
+    maxReachableIndex = Math.max(maxReachableIndex, i + nums[i]);
+
+    if (maxReachableIndex >= nums.length - 1) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+export const canJumpRecursive = (nums: number[]): boolean => {
   if (nums.length === 1) {
     return true;
   }
@@ -16,7 +34,7 @@ export const canJump = (nums: number[]): boolean => {
 
     const newNums = nums.slice(jumpLength);
 
-    if (canJump(newNums)) {
+    if (canJumpRecursive(newNums)) {
       return true;
     }
   }
