@@ -1,5 +1,15 @@
 export const isSubsequence = (s: string, t: string): boolean => {
   let sPointer = 0;
+
+  for (let i = 0; i < t.length; i++) {
+    if (s[sPointer] === t[i]) sPointer++;
+  }
+
+  return sPointer === s.length;
+};
+
+export const isSubsequenceTwoPointers = (s: string, t: string): boolean => {
+  let sPointer = 0;
   let tPointer = 0;
 
   while (sPointer < s.length && tPointer < t.length) {

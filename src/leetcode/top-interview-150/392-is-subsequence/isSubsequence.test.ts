@@ -1,6 +1,14 @@
-import { isSubsequence, isSubsequenceIndexOf } from './isSubsequence';
+import {
+  isSubsequence,
+  isSubsequenceIndexOf,
+  isSubsequenceTwoPointers,
+} from './isSubsequence';
 
-const functionsToTest = [{ fn: isSubsequence }, { fn: isSubsequenceIndexOf }];
+const functionsToTest = [
+  { fn: isSubsequence },
+  { fn: isSubsequenceTwoPointers },
+  { fn: isSubsequenceIndexOf },
+];
 
 describe.each(functionsToTest)('%s', ({ fn }) => {
   test('returns true if s is a subsequence of t is true', () => {
