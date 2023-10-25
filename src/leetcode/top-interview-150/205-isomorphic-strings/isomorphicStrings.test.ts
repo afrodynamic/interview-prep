@@ -1,19 +1,21 @@
-import { isIsomorphic } from './isomorphicStrings';
+import { isIsomorphic, isIsomorphicTwoMaps } from './isomorphicStrings';
 
-describe('isIsomorphic', () => {
+const functionsToTest = [{ fn: isIsomorphic }, { fn: isIsomorphicTwoMaps }];
+
+describe.each(functionsToTest)('%s', ({ fn }) => {
   test('returns true for two isomorphic strings', () => {
-    expect(isIsomorphic('paper', 'title')).toBe(true);
+    expect(fn('paper', 'title')).toBe(true);
   });
 
   test('returns true for two isomorphic strings with repeated characters', () => {
-    expect(isIsomorphic('egg', 'add')).toBe(true);
+    expect(fn('egg', 'add')).toBe(true);
   });
 
   test('returns false for two non-isomorphic strings with distinct characters', () => {
-    expect(isIsomorphic('foo', 'bar')).toBe(false);
+    expect(fn('foo', 'bar')).toBe(false);
   });
 
   test('returns false for two non-isomorphic strings with repeated characters', () => {
-    expect(isIsomorphic('badc', 'baba')).toBe(false);
+    expect(fn('badc', 'baba')).toBe(false);
   });
 });
