@@ -1,0 +1,5 @@
+{
+  "rust-analyzer.linkedProjects": [
+    "src/leetcode/leetcode-75/1768-merge-strings-alternately/rust/Cargo.toml"
+  ]
+}
