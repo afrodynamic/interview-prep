@@ -1,6 +1,7 @@
 {
   "rust-analyzer.linkedProjects": [
     "src/leetcode/leetcode-75/1768-merge-strings-alternately/rust/Cargo.toml",
-    "src/leetcode/leetcode-75/1071-greatest-common-divisor-of-strings/rust/Cargo.toml"
+    "src/leetcode/leetcode-75/1071-greatest-common-divisor-of-strings/rust/Cargo.toml",
+    "src/leetcode/leetcode-75/1431-kids-with-the-greatest-number-of-candies/rust/Cargo.toml"
   ]
 }
