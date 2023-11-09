@@ -2,6 +2,20 @@ export const kidsWithCandies = (
   candies: number[],
   extraCandies: number
 ): boolean[] => {
+  const maxCandyCount = candies.reduce(
+    (accumulator, currentValue) => Math.max(accumulator, currentValue),
+    0
+  );
+
+  return candies.map(
+    (initialCandyCount) => initialCandyCount + extraCandies >= maxCandyCount
+  );
+};
+
+export const kidsWithCandiesForLoops = (
+  candies: number[],
+  extraCandies: number
+): boolean[] => {
   const result: boolean[] = [];
 
   for (let i = 0; i < candies.length; i++) {
