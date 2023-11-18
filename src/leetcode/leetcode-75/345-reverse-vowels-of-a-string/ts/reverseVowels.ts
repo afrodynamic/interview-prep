@@ -6,13 +6,13 @@ export const reverseVowels = (s: string): string => {
 
   while (startPtr < endPtr) {
     if (vowels.has(s[startPtr])) {
-      if (vowels.has(s[endPtr])) {
-        result[startPtr] = s[endPtr];
-        result[endPtr] = s[startPtr];
-
-        startPtr++;
+      while (endPtr > startPtr && !vowels.has(s[endPtr])) {
         endPtr--;
-      } else {
+      }
+
+      if (vowels.has(s[endPtr])) {
+        [result[startPtr], result[endPtr]] = [s[endPtr], s[startPtr]];
+        startPtr++;
         endPtr--;
       }
     } else {
